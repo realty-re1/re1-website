@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --color-teal: #1A7F8E;
+  --color-teal-dark: #156e7b;
+  --color-teal-light: #e8f4f6;
+  --background: #ffffff;
+  --foreground: #111111;
+  --font-sans: var(--font-noto);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 페이드인 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* 이미지 비교 슬라이더 */
+.image-compare-container {
+  position: relative;
+  overflow: hidden;
+  cursor: col-resize;
+  user-select: none;
+}
+
+/* 스크롤바 커스텀 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A7F8E;
+  border-radius: 3px;
+}
